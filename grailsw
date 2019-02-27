@@ -143,6 +143,9 @@ fi
 # Setting a classpath using the -cp or -classpath option means not to use
 # the global classpath. Groovy behaves then the same as the java
 # interpreter
+if [ -z "$CP" ] ; then 
+   CP='grails-app'
+fi
 if [ -n "$CP" ] ; then
     CP="$CP"
 elif [ -n "$CLASSPATH" ] ; then

@@ -45,9 +45,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if defined?(VagrantVbguest::Middleware)
     config.vbguest.auto_update = true
   end
+  config.vm.synced_folder "/Users/ebrucucen/Documents/repo/github.com/measurementor", "/measurementor", create: "true" #TODO change this to where you are running measurementor
 
-  config.vm.synced_folder "PATH_TO_DOWNLOADED_PROJECT_HERE", "/measurementor", create: "true" #TODO change this to where you are running measurementor
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.network :forwarded_port, guest: 27017, host: 27017 #mongo
   config.vm.network :forwarded_port, guest: 28017, host: 28017 #mongo
   config.vm.network :forwarded_port, guest: 5601, host: 5601 #kibana
@@ -63,3 +63,48 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "puppet", manifests_path: "manifests", manifest_file: "default.pp" #, module_path: "/etc/puppet/modules"
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

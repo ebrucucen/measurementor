@@ -14,7 +14,7 @@ that will install everything you need to get going.  In a nutshell it installs:
 
 Once you run:
 
-    vagrant up
+    vagrant up --provision
 
 everything will get installed and you should have a box up and running.  Check elasticsearch and kibana
 by navigating to the following URLs in your web browser of choice:
